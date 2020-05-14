@@ -1,19 +1,3 @@
-<?php
-
-
-// class Person
-// {
-//   public function myMethod($name)
-//   {
-//     return "Hey {$name}! いらっしゃい\n";
-//   }
-// }
-
-// $hello = new Person();
-// $name = "Dani";
-// echo $hello->myMethod($name);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PHP Sandbox</title>
   <style>
-    h1 {
+    header {
       background-color: #333;
       padding: 2em;
       text-align: center;
@@ -31,9 +15,13 @@
 </head>
 <body>
     <header>
-      <h1>
-        <?= $greeting; ?>
-      </h1>
+      <h1>Hello World!</h1>
     </header> 
+
+    <ul>
+      <?php foreach ($hobbies as $hobby) : ?>
+        <li><?php echo $hobby ?></li>
+      <?php endforeach ?>
+    </ul>
 </body>
 </html>
