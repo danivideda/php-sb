@@ -23,5 +23,13 @@
         <li><?php echo $hobby ?></li>
       <?php endforeach ?>
     </ul>
+
+    <ul>
+        <?php foreach ($person as $feature => $value) : ?>
+          <li><strong><?= $feature?></strong>: <?= $value?></li>
+        <?php endforeach ?>
+    </ul>
+
+    
 </body>
 </html>
