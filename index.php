@@ -34,8 +34,7 @@
       <h1>
 
         <?php 
-          $name = $_GET['name'];
-          echo "Hello {$name}";
+          echo "Hello, " . htmlspecialchars($_GET['name']);
         ?>
 
       </h1>
