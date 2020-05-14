@@ -18,18 +18,34 @@
       <h1>Hello World!</h1>
     </header> 
 
+    <h4>Hobbies</h4>
     <ul>
       <?php foreach ($hobbies as $hobby) : ?>
         <li><?php echo $hobby ?></li>
       <?php endforeach ?>
     </ul>
 
+    <h4>My info</h4>
     <ul>
         <?php foreach ($person as $feature => $value) : ?>
           <li><strong><?= $feature?></strong>: <?= $value?></li>
         <?php endforeach ?>
     </ul>
 
-    
+    <h1>Task For The Day</h1>
+    <ul>
+          <li>
+            <strong>Name: </strong> <?= $task['title']; ?>
+          </li>
+          <li>
+            <strong>Due Date: </strong> <?= $task['due']; ?>
+          </li>
+          <li>
+            <strong>Person Responsible: </strong> <?= $task['assigned_to']; ?>
+          </li>
+          <li>
+            <strong>Status: </strong> <?= $task['completed'] ? '&#9989;' : '&#10062;'; ?>
+          </li>
+    </ul>
 </body>
 </html>

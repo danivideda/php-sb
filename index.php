@@ -16,4 +16,11 @@ echo '<pre>';
 (var_dump($person));
 echo '</pre>';
 
+$task = [
+  'title' => 'Finish homework',
+  'due' => 'today',
+  'assigned_to' => 'Dani',
+  'completed' => false
+]; // title, due, assigned_to, completed
+
 require 'index.view.php';
