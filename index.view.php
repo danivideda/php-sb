@@ -35,17 +35,32 @@
     <h1>Task For The Day</h1>
     <ul>
           <li>
-            <strong>Name: </strong> <?= $task['title']; ?>
+            <strong>Name: </strong> <?= $task_p['title']; ?>
           </li>
           <li>
-            <strong>Due Date: </strong> <?= $task['due']; ?>
+            <strong>Due Date: </strong> <?= $task_p['due']; ?>
           </li>
           <li>
-            <strong>Person Responsible: </strong> <?= $task['assigned_to']; ?>
+            <strong>Person Responsible: </strong> <?= $task_p['assigned_to']; ?>
           </li>
           <li>
-            <strong>Status: </strong> <?= $task['completed'] ? '&#9989;' : '&#10062;'; ?>
+            <strong>Status: </strong> <?= $task_p['completed'] ? '&#9989;' : '&#10062;'; ?>
           </li>
     </ul>
+
+    <h4>Task list from db</h4>
+    <ul>
+        <?php foreach ($tasks as $task) : ?>
+          <li>
+            <?php if ($task->complete) : ?>
+              <strike><?= $task->description ?></strike>
+            <?php else : ?>
+              <?= $task->description ?>
+            <?php endif ?>
+          </li>
+        <?php endforeach ?>
+    </ul>
+
+   
 </body>
 </html>
