@@ -53,7 +53,7 @@
         <?php foreach ($tasks as $task) : ?>
           <li>
             <?php if ($task->complete) : ?>
-              <strike><?= $task->description ?></strike>
+              <strike><strong><?= $task->description ?></strong></strike>
             <?php else : ?>
               <?= $task->description ?>
             <?php endif ?>
