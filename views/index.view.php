@@ -5,6 +5,14 @@
 </header> 
 
 <br>
+
+<ul>
+  <?php foreach($users as $user) : ?>
+  <li><?= $user->name; ?></li>
+  <?php endforeach; ?>
+</ul>
+
+<br>
 <form method="POST" action="/names">
   <label for="name">Submit your Name</label>
   <br>
